@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conecta Campus</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/break-points.css">
     <script src="./js/script.js" defer></script>
 
     
@@ -41,6 +42,17 @@
 </div>
 </header>
     <main class="container">
+        <section class="hero" aria-labelledby="titulo-principal">
+    <p class="etiqueta">Informação para circular com autonomia</p>
+
+    <h1 id="titulo-principal">
+        Encontre espaços e serviços do campus
+    </h1>
+
+    <p>Consulte localização, horário e recursos de acessibilidade antes de sair.</p>
+
+    <a class="botao" href="locais.html">Explorar locais</a>
+</section>
         <section>
             <h2>Locais em destaque</h2>
             <p>Conheça alguns espaços disponíveis no campus.</p>
@@ -49,21 +61,21 @@
         <div class="grade-locais">
 
         <article class="cartao">
-            <img src="./img/biblioteca-campus.png" alt="Interior da Biblioteca Central com mesas de estudo e estantes de livros">
+            <img src="./img/biblioteca.svg" alt="Interior da Biblioteca Central com mesas de estudo e estantes de livros">
             <h2>Biblioteca Central</h2>
             <p>Espaço disponível para estudo e consulta de livros.</p>
             <a href="./detalhes.html">Ver detalhes</a>
         </article>
 
         <article class="cartao">
-            <img src="./img/laboratorio-informatica.png" alt="Laboratório de informática com computadores e mesas de estudo">
+            <img src="./img/laboratorio.svg" alt="Laboratório de informática com computadores e mesas de estudo">
             <h2>Laboratório de Informática</h2>
             <p>Espaço equipado com computadores para aulas e atividades práticas.</p>
             <a href="./detalhes.html">Ver detalhes</a>
         </article>
         
         <article class="cartao">
-            <img src="./img/rota-acessivel.png" alt="Entrada do campus com rampa de acesso e corrimãos">
+            <img src="./img/rota-acessivel.svg" alt="Entrada do campus com rampa de acesso e corrimãos">
     <h2>Rota Acessível</h2>
 
     <p>Conheça os caminhos acessíveis para circular pelo campus com mais segurança e autonomia.</p>
@@ -77,22 +89,38 @@
 
     <footer>
         <div>
-            <form>
+            <form id="formulario-contato">
 
                 <fieldset>
                     <legend>Contato</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                    <small id="erro-nome" class="mensagem-erro"></small>
+
                     
-                    
+                
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name="email" placeholder="Digite seu email">
+                    <small id="erro-email" class="mensagem-erro"></small>
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto">
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="acessibilidade">Acessibilidade</option>
+                    </select>
+                    <small id="erro-assunto" class="mensagem-erro"></small>
     
-                    <textarea name="comentario" placeholder="Digite seu comentario"></textarea>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+                    <small id="erro-mensagem" class="mensagem-erro"></small>
                     <input type="submit" name="enviar" value="Enviar">
+                    <p id="mensagem-status" class="mensagem-status" role="status"></p>
                 </fieldset>
             </form>
                 
         </div>
-        <p>&copy; 2026 - Todos os direitos reservados - Conecta Campus</p>
+        <p>&copy; <span data-ano-atual>2026</span> - Todos os direitos reservados - Conecta Campus</p>
     </footer>
 </body>
 
