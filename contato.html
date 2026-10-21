@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Conecta Campus FIAP</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/break-points.css">
+    <script src="./js/script.js" defer></script>
+
+    
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+
+        <a class="marca" href="index.html">Conecta Campus FIAP</a>
+        <button 
+        class="botao-menu"
+        id="botao-menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+        >
+        <span>Menu</span> 
+        <span class="icone-menu" aria-hideen="true">☰</span>
+    </button>
+        <nav 
+        id="menu-principal"
+        class="navegacao-principal"
+        aria-label="Navegação principal"
+        >
+    <ul class="menu">
+        <li><a aria-current="page" href="./index.html">Home</a></li>
+        <li><a href="./locais.html">Locais</a></li>
+        <li><a href="./detalhes.html">Detalhes</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+        <li><a href="./páginas/pagina1.html">Pagina1</a></li>
+    </ul>
+</nav>
+</div>
+</header>
+    <main class="container">
+    <section class="secao">
+        <h1>Entre em contato</h1>
+        <p>Envie suas dúvidas, sugestões ou questões sobre acessibilidade no campus.</p>
+
+        <form id="formulario-contato">
+
+                <fieldset>
+                    <legend>Contato</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                    <small id="erro-nome" class="mensagem-erro"></small>
+
+                    
+                
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email">
+                    <small id="erro-email" class="mensagem-erro"></small>
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto">
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="acessibilidade">Acessibilidade</option>
+                    </select>
+                    <small id="erro-assunto" class="mensagem-erro"></small>
+    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+                    <small id="erro-mensagem" class="mensagem-erro"></small>
+                    <input type="submit" name="enviar" value="Enviar">
+                    <p id="mensagem-status" class="mensagem-status" role="status"></p>
+                </fieldset>
+            </form>
+
+
+    </section>
+</main>
+
+    <footer>
+        <div>
+            
+                
+        </div>
+        <p>&copy; <span data-ano-atual>2026</span> - Todos os direitos reservados - Conecta Campus</p>
+    </footer>
+</body>
+
+</html>

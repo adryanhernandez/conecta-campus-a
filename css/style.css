@@ -141,5 +141,23 @@ button:focus-visible {
     font-weight: 700;
 }
 
+.mensagem-erro {
+    color: #d32f2f;
+    font-size: 0.875rem;
+}
+
+.mensagem-status.erro {
+    color: #b42318;
+}
+
+.mensagem-status.sucesso {
+    color: #067647;
+}
+
+.campo-invalido {
+    border-color: #b42318;
+}
+
+
 
 
