@@ -52,6 +52,12 @@ img {
     list-style: none;
 }
 
+.menu a {
+    color: var(--cor-texto, #172033);
+    text-decoration: none;
+}
+
+
 .menu a[aria-current="page"] {
     color: var(--cor-primaria);
     text-decoration: underline;
@@ -109,6 +115,13 @@ button:focus-visible {
     display: block;
 }
 
+.cabecalho {
+    background-color: var(--cor-superficie);
+    border-bottom: 0.0625rem solid var(--cor-borda);
+    padding: 1rem 0;
+}
+
+
 .cabecalho-conteudo {
     display: flex;
     align-items: center;
@@ -156,6 +169,13 @@ button:focus-visible {
 
 .campo-invalido {
     border-color: #b42318;
+}
+
+.etiqueta {
+    color: var(--cor-primaria, #2563eb);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 
