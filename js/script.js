@@ -1,5 +1,7 @@
 "use strict";
 
+console.log("JavaScript do Conecta Campus carregado!");
+
 // Capturando o botão Menu pelo ID
 const botaoMenu = document.getElementById("botao-menu");
 
@@ -96,3 +98,32 @@ if (formularioValido) {
         console.log("Botão Enviar clicado!");
     });
 }
+
+// Usuário de teste para a atividade de Login
+const usuario = {
+    email: "usuario@teste.com",
+    senha: "123456"
+};
+
+// Capturando o formulário de Login pelo ID
+const formularioLogin = document.getElementById("formulario-login");
+console.log("Formulário de Login encontrado:", formularioLogin);
+
+// Dectando o envio do formulário de Login
+if (formularioLogin) {
+    formularioLogin.addEventListener("submit", function(evento) {
+    evento.preventDefault();
+
+    const emailDigitado = document.getElementById("login-email").value;
+    const senhaDigitada = document.getElementById("login-senha").value;
+
+    if (emailDigitado === usuario.email && senhaDigitada === usuario.senha) {
+        alert("Login realizado com sucesso!");
+        window.location.href = "./detalhes.html";
+    } else {
+        alert("Email ou senha incorretos!");
+    }
+});
+}
+
+
